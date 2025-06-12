@@ -15,7 +15,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let creds = Credentials::new(&client_id, &client_secret);
 
     let oauth = OAuth {
-        redirect_uri: "http://localhost".to_string(),
+        redirect_uri: "http://127.0.0.1:80".to_string(),
         scopes: scopes!("user-library-read playlist-modify-public"),
         ..Default::default()
     };
